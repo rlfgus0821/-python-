@@ -10,8 +10,8 @@ print(f'text3:{text3}')
 
 print('대문자로', text1.upper())
 print('소문자로', text1.lower())
-print('단어별 시작문자 대문자로', text1.lower().title())
-print('문장의 첫글자만 대문자로', text1.upper().capitalize())
+print('단어별 시작문자 대문자로', text1.title())
+print('문장의 첫글자만 대문자로', text1.capitalize())
 print('대문자<->소문자', text1.swapcase())
 
 #2. 문자열 검색
