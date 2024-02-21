@@ -16,10 +16,17 @@ a.pop(0)
 print(f'alist : a.pop(0) {a.pop(0)}', f'pop적용 후{a}')
 
 #3. sort() : 리스트의 요소들을 정렬하여 정렬된 리스트로 변경
+# sort(key=str.lower)
+char =['A','a','B','d','c']
+char.sort()
+print(f'char.sort() = {char}')
+char.sort(key=str.lower, reverse=True) # 대소문자 구분없이 역순으로 정렬
+print(f'char.sort(key=str.lower) = {char}')
 b = [6,3,5,1,-3]
 print(f'blist : {b}')
 b.sort()
 print(f'sort적용 후 : {b}')
+
 
 #4. reverse() : 리스트를 역순으로 변경
 b.reverse()
@@ -85,3 +92,25 @@ c = [1,2,3,4,5,6,7,8,9]
 c.append('5,4,3,2,1')
 print(c)
 print(len(c))
+
+#15. max() : 최대값을 반환하는 내장함수
+#16. min() : 최소값을 반환하는 내장함수
+
+exlist = [100,8,23,-76]
+exlist1 = ['hello','Exit','Zoo', 'hi']
+exlist1.sort()
+print(f'exlist = {exlist}')
+print(f'exlist1 = {exlist1}')
+print(f'최대값: {max(exlist)}, 최솟값: {min(exlist)}')
+print(f'최대값: {max(exlist1)}, 최솟값: {min(exlist1)}')
+
+#17. in, not in 연산자
+num = [1,2,3,4,5]
+result = 10 in num
+print(result) # False
+
+result = 10 not in num
+print(result) # True
+
+result = 1 in num
+print(result) # True
