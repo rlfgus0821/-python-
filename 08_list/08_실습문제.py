@@ -21,12 +21,16 @@ print(f'평균: {tot/3:.2f}')
 print(f'80점 이상 학생: {cnt}')
 
 #3. 상품을 리스트에 추가하고 출력
-n = 3
+
 namelist = []
-for i in range(n):
+while True:
         a = input('상품등록(엔터키 누르면 종료): ')
         namelist.append(a)
-print(f'등록된 상품 : {namelist}')
+        if a =='':
+                print('종료합니다')
+                break
+        else:
+                print(f'등록된 상품 : {namelist}')
 
 #4. 2번 문제에서 학생들의 점수를 내림차순으로 정렬
 tot = 0

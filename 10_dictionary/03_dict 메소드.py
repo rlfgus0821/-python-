@@ -3,6 +3,7 @@
 d = {'one':1, 'two':2, 'three':3}
 print(f"f.get('two')= {d.get('two')}")
 print(f"f.get('four',4)= {d.get('four',4)}")
+print(d.get('four'))
 print(d)
 
 #2. .setdefault() : .get()과 동일하나 값이 존재하지 않을 때 값을 추가
