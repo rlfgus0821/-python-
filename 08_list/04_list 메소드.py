@@ -1,6 +1,6 @@
 # list 메소드(함수)
 
-#1. appemd() : 리스트 맨 뒤에 항목을 추가
+#1. append() : 리스트 맨 뒤에 항목을 추가
 
 a = []
 a.append('apple')

@@ -67,3 +67,7 @@ def addlist(x,y):
 print(addlist(list1,list2))
 # lambda 함수 이용
 print(list(map(lambda n1, n2:n1+n2, list1, list2)))
+
+# lambda 함수의 if, 반복문 사용가능
+list =(list(map(lambda x : '10' if x%2==0 else '-10', range(10))))
+print(list)

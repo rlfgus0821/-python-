@@ -3,11 +3,11 @@
 # 내장함수(built in function) / 사용자가 정의한 함수
 # 함수 정의 및 호출
 
-#예. 이름, 나이, 연락처 출력하는 함수 : show.info()
+#예. 이름, 나이, 연락처 출력하는 함수 : show.info(
 def show_info():
     print('이름 : 홍길동')
     print('나이 : 20')
-    print('연락처 : 010-1111-1111')
+    print('연락처 : 010-1111-1111'
 show_info()
 def show_info1():
     name = input('이름 입력: ')
