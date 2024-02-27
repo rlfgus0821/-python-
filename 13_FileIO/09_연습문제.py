@@ -9,23 +9,26 @@ print(flist)
 # # 각 단어들이 몇 개씩 사용되고 있는지 단어별 개수를 출력하는 프로그램 작성
 # # 리스트, 세트, 딕셔너리 등의 자료구조를 이용
 # # 단어들은 모두 소문자로 변환하여 사용한다.
-list=[]
 list1=[]
-
+list2=[]
+list3=[]
 with open('../data/yesterday.txt','r') as f:
-    list=f.readlines()
-for i in list:
+    list1=f.readlines()
+    list1.sort()
+for i in list1:
     a = (i.strip('\n').split(' '))
     for s in a:
-        list1.append(s.lower())
-list=list1
-list1=list(set(list1))
-list1.sort(key=str.lower)
-list1.remove('')
-print(list1)
-
-for i in list1:
-    print(f'{i}:{list.count(i)}')
+        list2.append(s.lower())
+        for b in list2:
+            if b == '':
+             list2.remove('')
+            if b != '':
+             continue
+print(list2)
+for i in list2:
+    for a in i:
+        list3.append(a)
+        print(f'{a}:{list3.count(a)}')
 
 # #3. 한 줄에 두 개의 숫자가 저장되어 있는 파일을 읽어와 한 줄의 두 숫자를 더한 후 연산 결과를 파일로 내보내는 프로그램 작성
 # #3-1. 파일을 읽어오고 파일에 쓰고, 숫자에 대해 연산하는 기능은 함수 my_sum()을 정의하여 사용 my_sum(inputfile 객체,저장파일명)
