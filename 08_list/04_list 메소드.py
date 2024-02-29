@@ -69,6 +69,7 @@ print(f'sorted(b)전 {b}')
 newb = sorted(b, reverse=True) # reverse=True -> 역순
 print(f'sorted(b)후 {b}')
 print(f'sorted(b)로 생성된 {newb}')
+print(id(b), id(newb))
 
 #11. copy() : 리스트 복사
 cpb= b.copy()

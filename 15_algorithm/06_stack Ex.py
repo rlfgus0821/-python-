@@ -39,40 +39,32 @@ def peek():
         return
     return stack[top]
 
+def checkbracket(ex):
+    for ch in ex:
+        if ch == '(':
+            push(ch)
+        elif ch == ')':
+            data = pop()
+            if data == '(':
+                pass
+            else:
+                return False
+    if top == -1: # 스택이 깔끔하게 비었니?
+        return True
+    else:
+        return False
 ## 변수
-SIZE = 5 # 전역상수, 대문자로 표현
+SIZE = 50 # 전역상수, 대문자로 표현
 stack = [None for _ in range(SIZE)]
 top = -1
 
 ## 메인
+# 괄호 갯수 오류 검사 : (())()() --> 여는 괄호push 닫는 괄호pop
+expr = '((a+b)(c+d())/f(())'
+retf = checkbracket(expr)
 
-push('커피')
-push('녹차')
-push('꿀물')
-push('콜라')
-push('환타')
-print('바닥: ', stack)
-
-push('게토레이')
-print('바닥: ', stack)
-
-# pop()
-redata = pop()
-print('pop1 --->', redata)
-
-redata = pop()
-print('pop2 --->', redata)
-
-redata = pop()
-print('pop3 --->', redata)
-
-# peek() 다음에 나올것을 확인해보기
-print('다음 예정 --->', peek())
-
-redata = pop()
-print('pop4 --->', redata)
-print(stack)
-
-## 스택 응용 ##
-#1. 함수 호출 : a()-> b()-> c()-> d() return
-#2. 괄호 갯수 오류 검사 : (())()() --> 여는 괄호push 닫는 괄호pop
+print(expr)
+if retf:
+    print('정상')
+else:
+    print('오류')
