@@ -1,11 +1,17 @@
 import sys
+
+#print(sys.path)
 for path in sys.path:
     print(path)
 
+print(type(sys.path))
 # 파이썬 모듈 검색 경로
-#1. sys.module
-#2. buit_in_module
+#1. sys.modules
+#2. built_in_modules
 #3. sys.path
 
-# settings -> pythoninterpreter -> show all -> 파일 탐색기 -> +버튼 누르고 추가하기
+sys.path.append("C:/workspace_Multi07/01_pythonProject/15_module_package/my_modules")
 
+from showinfo1 import *
+
+showname1()

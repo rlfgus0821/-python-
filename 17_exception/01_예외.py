@@ -30,3 +30,7 @@ import mymodule
 # FileNotFoundError: 파일을 찾을 수 없는 에러
 with open('except.txt','r') as f:
     f.read()
+
+# OSError
+with open('c:\file\except.txt','r') as f:
+    f.read()
